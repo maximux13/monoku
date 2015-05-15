@@ -1,0 +1,18 @@
+
+<div class="container">
+  <div class="profile">
+    <ol class="breadcrumb">
+      <li><a ng-href="#/">Home</a></li>
+      <li>{{ artist.artist.name }}</li>
+    </ol>
+    <div class="profile__name">{{ artist.artist.name }}</div>
+    <div class="profile__image"><img ng-src="{{ artist.artist.image[2]['#text'] }}" alt=""/></div>
+    <div ng-bind-html="artist.artist.bio.summary" class="profile__bio"></div>
+    <div class="profile__similars">
+      <div ng-repeat="similar in artist.artist.similar.artist" class="artist">
+        <div class="artist__img"><img ng-src="{{ similar.image[1]['#text'] }}" alt=""/></div>
+        <div class="artist__name"><a ng-href="#/{{ similar.name }}">{{ similar.name }}</a></div>
+      </div>
+    </div>
+  </div>
+</div>

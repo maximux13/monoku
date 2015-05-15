@@ -1,0 +1,15 @@
+
+<div id="home">
+  <div class="container">
+    <h1 class="title title--center">Last api - Search</h1>
+    <form class="search input-group">
+      <input ng-model="artist.search" ng-change="search()" class="search__input"/>
+    </form>
+    <div class="artists">
+      <div ng-repeat="artist in artist.data.results.artistmatches.artist | limitTo: 15" class="artist">
+        <div class="artist__img"><img ng-src="{{ artist.image[1]['#text'] }}" alt=""/></div>
+        <div class="artist__name"><a ng-href="#/{{ artist.name }}">{{ artist.name }}</a></div>
+      </div>
+    </div>
+  </div>
+</div>

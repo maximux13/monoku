@@ -1,0 +1,14 @@
+#home
+	.container
+		h1.title.title--center Last api - Search
+
+		form.search.input-group
+			input.search__input(ng-model="artist.search" ng-change="search()")
+
+		.artists
+			.artist(ng-repeat="artist in artist.data.results.artistmatches.artist | limitTo: 15")
+				.artist__img
+					img(ng-src="{{ artist.image[1]['#text'] }}" alt="")
+				.artist__name
+					a(ng-href="#/{{ artist.name }}"){{ artist.name }}
+

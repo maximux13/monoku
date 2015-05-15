@@ -1,0 +1,14 @@
+.container
+    .profile
+        ol.breadcrumb
+            li: a(ng-href="#/") Home
+            li {{ artist.artist.name }}
+        .profile__name {{ artist.artist.name }}
+        .profile__image
+            img(ng-src="{{ artist.artist.image[2]['#text'] }}" alt="")
+        .profile__bio(ng-bind-html="artist.artist.bio.summary")
+
+        .profile__similars
+            .artist(ng-repeat="similar in artist.artist.similar.artist")
+                .artist__img: img(ng-src="{{ similar.image[1]['#text'] }}" alt="")
+                .artist__name: a(ng-href="#/{{ similar.name }}") {{ similar.name }}

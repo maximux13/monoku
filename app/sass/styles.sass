@@ -1,0 +1,68 @@
+html, body
+  height: 100%
+
+.title
+  font:
+    size: 26px
+  @at-root #{&}--center
+    text-align: center
+
+.search
+  display: flex
+  justify-content: center
+  width: 100%
+
+  @at-root
+    &__input
+      width: 50%
+      padding: 10px
+      border: 1px solid #ccc
+      box-shadow: 0 3px 0 red
+      text-align: center
+
+.artists
+  display: flex
+  align-content: center
+  flex-direction: column
+  width: 100%
+  & .artist
+    display: flex
+    margin: 5px auto
+    align-items: center
+    width: 50%
+    padding: 10px
+    border: 1px solid #ccc
+    box-shadow: 0 1px 2px #f2f2f2
+
+    @at-root
+      &__img
+        margin-right: 10px
+.profile
+  margin: 0 auto
+  width: 50%
+  @at-root
+    &__name, &__image
+      text-align: center
+    &__name
+      margin-bottom: 20px
+      background: #f6f6f6
+      border-left: 3px solid red
+      font-size: 26px
+
+
+    &__bio
+      padding: 10px
+    &__similars
+      display: flex
+      flex-direction: row
+      justify-content: space-around
+      margin: 0 auto
+
+      & .artist
+        padding: 10px
+        border: 1px solid #ccc
+        &__img,&__name
+          text-align: center
+        &__img
+          height: 80px
+          overflow: hidden

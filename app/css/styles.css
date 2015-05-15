@@ -1,0 +1,23 @@
+html, body { height: 100%; }
+
+.title { font-size: 26px; }
+.title--center { text-align: center; }
+
+.search { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -webkit-justify-content: center; -ms-flex-pack: center; justify-content: center; width: 100%; }
+.search__input { width: 50%; padding: 10px; border: 1px solid #ccc; box-shadow: 0 3px 0 red; text-align: center; }
+
+.artists { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-align-content: center; -ms-flex-line-pack: center; align-content: center; -webkit-box-orient: vertical; -webkit-box-direction: normal; -webkit-flex-direction: column; -ms-flex-direction: column; flex-direction: column; width: 100%; }
+.artists .artist { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; margin: 5px auto; -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; width: 50%; padding: 10px; border: 1px solid #ccc; box-shadow: 0 1px 2px #f2f2f2; }
+.artists .artist__img { margin-right: 10px; }
+
+.profile { margin: 0 auto; width: 50%; }
+.profile__name, .profile__image { text-align: center; }
+
+.profile__name { margin-bottom: 20px; background: #f6f6f6; border-left: 3px solid red; font-size: 26px; }
+
+.profile__bio { padding: 10px; }
+
+.profile__similars { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -webkit-flex-direction: row; -ms-flex-direction: row; flex-direction: row; -webkit-justify-content: space-around; -ms-flex-pack: distribute; justify-content: space-around; margin: 0 auto; }
+.profile__similars .artist { padding: 10px; border: 1px solid #ccc; }
+.profile__similars .artist__img, .profile__similars .artist__name { text-align: center; }
+.profile__similars .artist__img { height: 80px; overflow: hidden; }
